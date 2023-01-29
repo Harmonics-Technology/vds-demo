@@ -13,7 +13,7 @@ const { locales } = i18nConfig;
  * please visit https://github.com/vinissimus/next-translate
  */
 
-export const NextTranslateExample: React.FC<{ defaultNamespace: string }> = ({
+export const NextTranslateExample: React.FC<{ defaultNamespace?: string }> = ({
     defaultNamespace,
 }) => {
     const { t, lang } = useTranslation(defaultNamespace);
