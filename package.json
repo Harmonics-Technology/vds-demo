@@ -13,6 +13,8 @@
     },
     "dependencies": {
         "@chakra-ui/react": "^1.1.4",
+        "@clayui/css": "^3.85.0",
+        "@clayui/multi-step-nav": "^3.85.0",
         "@emotion/react": "^11.1.4",
         "@emotion/styled": "^11.0.0",
         "axios": "^0.21.1",

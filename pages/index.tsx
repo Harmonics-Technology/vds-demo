@@ -5,7 +5,7 @@ import { Cards } from "@components/utilities/Cards";
 
 const Home: React.FC = () => {
     return (
-        <Flex direction="column" minH="100vh">
+        <Flex direction="column" minH="100vh" mb="5rem">
             {/* <NextTranslateExample defaultNamespace="home" /> */}
             <Heading textAlign="left" textTransform="uppercase">
                 Scaleup0003
@@ -13,8 +13,13 @@ const Home: React.FC = () => {
             <Grid templateColumns="repeat(2, 1fr)" gap="3rem" mt="3rem">
                 <Cards num="1" title="solicitation posting" bg="orange" />
                 <Cards num="2" title="webinar" bg="gray" />
-                <Cards num="3" title="feedback period" bg="yellow.400" />
+                <Cards num="3" title="feedback period" bg="yellow" />
                 <Cards num="4" title="solicitation final" bg="blue.400" />
+                <Cards
+                    num="5"
+                    title="evaluation and interactive session"
+                    bg="orange"
+                />
             </Grid>
         </Flex>
     );

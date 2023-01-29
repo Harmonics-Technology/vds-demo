@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
         <ChakraProvider theme={theme}>
             <QueryClientProvider client={queryClient}>
-                <Hydrate state={pageProps.dehydratedState}>
+                <Hydrate state={pageProps}>
                     <RootStoreProvider>
                         <Layout>
                             <Component {...pageProps} />

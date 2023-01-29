@@ -5,12 +5,16 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
+import { Progress } from "@chakra-ui/react";
+import Steps from "@components/utilities/Steps";
 
 function First() {
     const router = useRouter();
     const pageName = router.asPath.split("/")[2].replaceAll("-", " ");
     return (
         <Box>
+            {/* <Progress value={20} /> */}
+            <Steps value={0} />
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text mt="1rem">

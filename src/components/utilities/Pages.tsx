@@ -5,8 +5,8 @@ import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 
 interface pageProps {
     prevTitle?: string;
-    nextTitle: string;
-    nextUrl: string;
+    nextTitle?: string;
+    nextUrl?: string;
     prevUrl?: string;
 }
 
@@ -55,7 +55,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 </Link>
             </Box>
             <Box w="full">
-                <Link passHref href={nextUrl}>
+                <Link passHref href={nextUrl || ""}>
                     <Box
                         w="full"
                         display={nextTitle == undefined ? "none" : nextTitle}
