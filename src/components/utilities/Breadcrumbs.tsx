@@ -10,16 +10,17 @@ function Breadcrumbs() {
         <HStack my="1rem">
             {childPage.map((child) => (
                 <>
-                    <Box
-                        bgColor="red.700"
-                        color="white"
+                    <Flex
+                        bgColor="gray.200"
+                        color="black"
                         fontSize=".8rem"
                         px=".5rem"
                         py=".1rem"
                         borderRadius="30px"
+                        align="center"
                     >
                         {child.replaceAll("-", " ")}
-                    </Box>
+                    </Flex>
                 </>
             ))}
         </HStack>
