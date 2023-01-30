@@ -1,12 +1,10 @@
 import React from "react";
 import { Spacer, Flex, Heading, Grid } from "@chakra-ui/react";
-import { NextTranslateExample } from "@components/examples/translate";
 import { Cards } from "@components/utilities/Cards";
 
 const Home: React.FC = () => {
     return (
         <Flex direction="column" minH="100vh">
-            {/* <NextTranslateExample defaultNamespace="home" /> */}
             <Heading textAlign="left" textTransform="uppercase">
                 Scaleup0003
             </Heading>

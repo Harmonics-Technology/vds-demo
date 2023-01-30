@@ -11,7 +11,6 @@ import {
     Icon,
     Button,
 } from "@chakra-ui/react";
-import { NextTranslateExample } from "@components/examples/translate";
 import { Cards } from "@components/utilities/Cards";
 import { MdTimerOff } from "react-icons/md";
 import { CiTimer } from "react-icons/ci";
