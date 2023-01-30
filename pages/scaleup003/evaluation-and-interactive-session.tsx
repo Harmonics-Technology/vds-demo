@@ -24,7 +24,7 @@ function Fifth() {
                 currently under review and will be available in
             </Text>
             <ClayToggle
-                label={hide ? "Show Countdown" : "Hide Countdown"}
+                label={!hide ? "Show Countdown" : "Hide Countdown"}
                 onToggle={setHide}
                 symbol={{
                     off: "timed",

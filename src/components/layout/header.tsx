@@ -14,7 +14,7 @@ function Header() {
         >
             <Flex justify="space-between" w="75%" align="center" h="90%">
                 <Link href="/" passHref>
-                    <Image src="../cdlogo.svg" h="1.5rem" cursor="pointer" />
+                    <Image src="/cdlogo.svg" h="1.5rem" cursor="pointer" />
                 </Link>
                 <Box>
                     <Heading>VDS Demo</Heading>

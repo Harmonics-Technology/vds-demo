@@ -20,7 +20,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
             gap="2rem"
         >
             <Box w="full">
-                <Link passHref href={`/scope/${prevUrl}` || ""}>
+                <Link passHref href={`/scaleup003/${prevUrl}` || ""}>
                     <Box
                         w="full"
                         display={prevTitle == undefined ? "none" : prevTitle}
@@ -41,7 +41,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                                     Previous
                                 </Text>
                             </HStack>
-                            <Text
+                            {/* <Text
                                 fontSize="1.2rem"
                                 textTransform="capitalize"
                                 mb="0"
@@ -49,13 +49,13 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                                 color="blue.400"
                             >
                                 {prevTitle}
-                            </Text>
+                            </Text> */}
                         </Box>
                     </Box>
                 </Link>
             </Box>
             <Box w="full">
-                <Link passHref href={`/scope/${nextUrl}` || ""}>
+                <Link passHref href={`/scaleup003/${nextUrl}` || ""}>
                     <Box
                         w="full"
                         display={nextTitle == undefined ? "none" : nextTitle}
@@ -76,7 +76,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                                 </Text>
                                 <Icon as={BsArrowRightShort} />
                             </HStack>
-                            <Text
+                            {/* <Text
                                 fontSize="1.2rem"
                                 textTransform="capitalize"
                                 mb="0"
@@ -84,7 +84,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                                 color="blue.400"
                             >
                                 {nextTitle}
-                            </Text>
+                            </Text> */}
                         </Box>
                     </Box>
                 </Link>

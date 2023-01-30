@@ -1,26 +1,56 @@
 import React from "react";
-import { Spacer, Flex, Heading, Grid } from "@chakra-ui/react";
+import {
+    Spacer,
+    Flex,
+    Heading,
+    Grid,
+    Image,
+    Box,
+    Text,
+    HStack,
+    Icon,
+    Button,
+} from "@chakra-ui/react";
 import { NextTranslateExample } from "@components/examples/translate";
 import { Cards } from "@components/utilities/Cards";
+import { MdTimerOff } from "react-icons/md";
+import { CiTimer } from "react-icons/ci";
+import Link from "next/link";
 
 const Home: React.FC = () => {
     return (
         <Flex direction="column" minH="100vh">
-            {/* <NextTranslateExample defaultNamespace="home" /> */}
-            <Heading textAlign="left" textTransform="uppercase">
-                Scaleup0003
-            </Heading>
-            <Grid templateColumns="repeat(2, 1fr)" gap="3rem" mt="3rem">
-                <Cards num="1" title="solicitation posting" bg="orange" />
-                <Cards num="2" title="webinar" bg="gray" />
-                <Cards num="3" title="feedback period" bg="yellow" />
-                <Cards num="4" title="solicitation final" bg="blue.400" />
-                <Cards
-                    num="5"
-                    title="evaluation and interactive session"
-                    bg="orange"
-                />
-            </Grid>
+            <Box w="80%" boxShadow="md" mx="auto">
+                <Box w="full" h="18rem" overflow="hidden">
+                    <Image src="/cdb.jpg" w="full" h="full" objectFit="cover" />
+                </Box>
+                <Box w="full" p="1rem">
+                    <Text fontSize="1.3rem" fontWeight="bold">
+                        Title of the application
+                    </Text>
+                    <HStack>
+                        <Icon as={CiTimer} />
+                        <Text>Posting period: 9:00am</Text>
+                    </HStack>
+                    <HStack>
+                        <Icon as={MdTimerOff} />
+                        <Text>Closing period: 9:00am</Text>
+                    </HStack>
+                    <Flex justify="flex-end" mt="2rem">
+                        <Link passHref href="/dashboard">
+                            <Button
+                                bgColor="brand.100"
+                                color="white"
+                                borderRadius="0"
+                                fontSize=".8rem"
+                                px="1rem"
+                            >
+                                Get Started
+                            </Button>
+                        </Link>
+                    </Flex>
+                </Box>
+            </Box>
         </Flex>
     );
 };

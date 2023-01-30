@@ -22,7 +22,7 @@ export const Cards = ({ num, title, bg }: pageProps) => {
         >
             <Text
                 bgColor={bg}
-                color="white"
+                color={bg == "yellow" ? "black" : "white"}
                 p=".2rem 2rem .2rem 1rem"
                 w="fit-content"
                 fontSize=".9rem"
@@ -30,7 +30,7 @@ export const Cards = ({ num, title, bg }: pageProps) => {
                 Stage {num}
             </Text>
             <Heading textTransform="capitalize">{title}</Heading>
-            <Link passHref href={`scope/${title.replaceAll(" ", "-")}`}>
+            <Link passHref href={`scaleup003/${title.replaceAll(" ", "-")}`}>
                 <Flex
                     role="group"
                     transition="all .5s ease"

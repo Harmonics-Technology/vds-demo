@@ -8,9 +8,11 @@ export default {
             h1: {
                 fontWeight: 500,
                 marginBottom: "0.5em",
+                fontFamily: "'Lato', sans-serif",
             },
             p: {
                 marginBottom: "1em",
+                fontFamily: "'Lato', sans-serif",
             },
         },
     },
