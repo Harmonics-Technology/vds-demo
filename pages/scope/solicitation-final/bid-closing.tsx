@@ -7,16 +7,16 @@ import { useRouter } from "next/router";
 import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
 
-function Third() {
+function Fourth() {
     const router = useRouter();
-    const pageName = router.asPath.split("/")[2].replaceAll("-", " ");
+    const pageName = router.asPath.split("/")[3].replaceAll("-", " ");
     return (
         <Box>
-            <Steps value={2.5} />
+            <Steps value={3} />
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text mt="1rem">
-                This is all about the third stage of the {pageName}. it's so
+                This is all about the fourth stage of the {pageName}. it's so
                 easy to navigate, try it and see what happens. <br />
                 You can click next to see the next stage
             </Text>
@@ -29,14 +29,14 @@ function Third() {
             </Link>
             <Box mt="2rem">
                 <Pages
-                    prevTitle="feedback period"
-                    nextTitle="bid closing"
-                    nextUrl="bid-closing"
-                    prevUrl="feedback-period"
+                    prevTitle="solicitation final"
+                    nextTitle="evaluation and interactive session"
+                    nextUrl="evaluation-and-interactive-session"
+                    prevUrl="solicitation-final"
                 />
             </Box>
         </Box>
     );
 }
 
-export default Third;
+export default Fourth;

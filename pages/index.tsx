@@ -5,7 +5,7 @@ import { Cards } from "@components/utilities/Cards";
 
 const Home: React.FC = () => {
     return (
-        <Flex direction="column" minH="100vh" mb="5rem">
+        <Flex direction="column" minH="100vh">
             {/* <NextTranslateExample defaultNamespace="home" /> */}
             <Heading textAlign="left" textTransform="uppercase">
                 Scaleup0003

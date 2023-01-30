@@ -30,7 +30,7 @@ function First() {
                 Click to view canada buy <Icon as={BiLinkExternal} mx="2px" />
             </Link>
             <Box mt="2rem">
-                <Pages nextTitle="webinar" nextUrl="/scope/webinar" />
+                <Pages nextTitle="webinar" nextUrl="webinar" />
             </Box>
         </Box>
     );

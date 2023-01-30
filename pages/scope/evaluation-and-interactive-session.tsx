@@ -34,7 +34,10 @@ function Fifth() {
             />
             <Countdown hide={hide} />
             <Box mt="2rem">
-                <Pages prevTitle="bid closing" prevUrl="bid-closing" />
+                <Pages
+                    prevTitle="bid closing"
+                    prevUrl="solicitation-final/bid-closing"
+                />
             </Box>
         </Box>
     );

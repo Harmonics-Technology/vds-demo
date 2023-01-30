@@ -20,7 +20,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
             gap="2rem"
         >
             <Box w="full">
-                <Link passHref href={prevUrl || ""}>
+                <Link passHref href={`/scope/${prevUrl}` || ""}>
                     <Box
                         w="full"
                         display={prevTitle == undefined ? "none" : prevTitle}
@@ -55,7 +55,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 </Link>
             </Box>
             <Box w="full">
-                <Link passHref href={nextUrl || ""}>
+                <Link passHref href={`/scope/${nextUrl}` || ""}>
                     <Box
                         w="full"
                         display={nextTitle == undefined ? "none" : nextTitle}
