@@ -30,7 +30,7 @@ export const Cards = ({ num, title, bg }: pageProps) => {
                 Stage {num}
             </Text>
             <Heading textTransform="capitalize">{title}</Heading>
-            <Link passHref href={`scope/${title.replace(" ", "-")}`}>
+            <Link passHref href={`scope/${title.replaceAll(" ", "-")}`}>
                 <Flex
                     role="group"
                     transition="all .5s ease"
