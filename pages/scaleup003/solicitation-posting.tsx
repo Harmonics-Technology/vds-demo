@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Icon, Flex, Image } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
 import NextLink from "next/link";
@@ -28,31 +28,42 @@ function First() {
         },
     };
     return (
-        <Box>
-            {/* <Progress value={20} /> */}
+        <>
             <Steps value={0} />
-            <Breadcrumbs />
-            <Heading textTransform="capitalize">{pageName}</Heading>
-            <Text mt="1rem">
-                This is all about the first stage of the {pageName}. it's so
-                easy to navigate, try it and see what happens. <br />
-                You can click next to see the next stage
-            </Text>
-            <Text>
-                View the canada buy page to know the status of your posting and
-                other related information
-            </Text>
-            <Link
-                color="blue"
-                isExternal
-                href="https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/pw-22-00985529"
-            >
-                Click to view canada buy <Icon as={BiLinkExternal} mx="2px" />
-            </Link>
-            <Box mt="2rem">
-                <Pages nextTitle="webinar" nextUrl="webinar" />
-            </Box>
-            {/* <Speech
+            <Flex w="full" justify="space-between" gap="2rem">
+                <Box w="60%">
+                    {/* <Progress value={20} /> */}
+                    <Breadcrumbs />
+                    <Heading textTransform="capitalize">{pageName}</Heading>
+                    <Text mt="1rem">
+                        The Government of Canada currently lacks the ability to
+                        automate the production and submission of tender
+                        documents. Current forms tend to be overly complex and
+                        difficult to follow, and the process to provide the
+                        required information is typically labour intensive.{" "}
+                        <br />
+                        <br />
+                        <strong>
+                            {" "}
+                            SSC is seeking a solution that addresses these
+                            challenges and allows the Bidder to enter and submit
+                            a bid from their smart enabled device.
+                        </strong>{" "}
+                        SSC intends to award up to 4 contracts for up to $20k
+                        each for the first Prototype of an Automated Bidding
+                        Solution.
+                        <br />
+                        <br />
+                    </Text>
+                    <Link
+                        color="blue"
+                        isExternal
+                        href="https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/pw-22-00985529"
+                    >
+                        Click to view original posting of the solicitation on
+                        canada buy <Icon as={BiLinkExternal} mx="2px" />
+                    </Link>
+                    {/* <Speech
                 stop={true}
                 pause={true}
                 resume={true}
@@ -61,7 +72,18 @@ function First() {
                 easy to navigate, try it and see what happens. <br />
                 You can click next to see the next stage"
             /> */}
-        </Box>
+                </Box>
+                <Box w="40%" mt="3rem">
+                    <Image src="/vid.png" w="full" />
+                    <Text textAlign="center" mt="1rem">
+                        Watch video to learn more
+                    </Text>
+                </Box>
+            </Flex>
+            <Box mt="2rem">
+                <Pages nextTitle="webinar" nextUrl="webinar" />
+            </Box>
+        </>
     );
 }
 

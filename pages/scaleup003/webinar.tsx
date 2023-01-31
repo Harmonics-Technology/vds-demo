@@ -16,15 +16,15 @@ function Second() {
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text mt="1rem">
-                This is all about the second stage of the {pageName}. it's so
-                easy to navigate, try it and see what happens. <br />
-                You can click next to see the next stage
+                This is the proposed agenda and the image below will guide you
+                through
             </Text>
-            <Text>
-                View the canada buy page to know the status of your posting and
-                other related information
-            </Text>
-            <Link color="blue" isExternal href="/">
+
+            <Link
+                color="blue"
+                isExternal
+                href="https://supplier-fournisseur-sscp2pspc.ssc-spc.gc.ca/page.aspx/en/sup/registration_extranet_manage"
+            >
                 Click here to register <Icon as={BiLinkExternal} mx="2px" />
             </Link>
             <Box mt="2rem">

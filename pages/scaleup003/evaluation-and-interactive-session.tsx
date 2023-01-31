@@ -18,11 +18,12 @@ function Fifth() {
             <Steps value={4} />
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
-            <Text mt="1rem">This is the end of this page</Text>
             <Text>
                 Your application has been successfully submitted and is
-                currently under review and will be available in
+                currently under review and you will be able to access this page
+                in:
             </Text>
+            <Countdown hide={hide} />
             <ClayToggle
                 label={!hide ? "Show Countdown" : "Hide Countdown"}
                 onToggle={setHide}
@@ -32,7 +33,6 @@ function Fifth() {
                 }}
                 toggled={hide}
             />
-            <Countdown hide={hide} />
             <Box mt="2rem">
                 <Pages
                     prevTitle="bid closing"

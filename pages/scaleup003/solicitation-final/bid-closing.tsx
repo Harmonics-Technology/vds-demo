@@ -16,17 +16,14 @@ function Fourth() {
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text mt="1rem">
-                This is all about the fourth stage of the {pageName}. it's so
-                easy to navigate, try it and see what happens. <br />
-                You can click next to see the next stage
+                You're expected to see information about the post bidding
+                process end to end here
             </Text>
             <Text>
-                View the canada buy page to know the status of your posting and
-                other related information
+                More information about the solicitation process will be
+                available on the next stage
             </Text>
-            <Link color="blue" isExternal href="/">
-                Click here to register <Icon as={BiLinkExternal} mx="2px" />
-            </Link>
+
             <Box mt="2rem">
                 <Pages
                     prevTitle="solicitation final"

@@ -13,7 +13,7 @@ interface pageProps {
 function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
     return (
         <HStack w="100%" justify="center" cursor="pointer" my="3rem" gap="2rem">
-            <Box w={["full", "30%"]}>
+            <Box w={["full", "100%"]}>
                 <Link
                     passHref
                     href={
@@ -65,7 +65,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                     </Box>
                 </Link>
             </Box>
-            <Box w={["full", "30%"]}>
+            <Box w={["full", "100%"]}>
                 <Link
                     passHref
                     href={

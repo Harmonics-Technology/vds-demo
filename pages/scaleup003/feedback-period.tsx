@@ -15,17 +15,14 @@ function Third() {
             <Steps value={2} />
             <Breadcrumbs />
             <Heading textTransform="capitalize">{pageName}</Heading>
-            <Text mt="1rem">
-                This is all about the third stage of the {pageName}. it's so
-                easy to navigate, try it and see what happens. <br />
-                You can click next to see the next stage
-            </Text>
+            <Text mt="1rem">You are now in the {pageName}!</Text>
             <Text>
-                View the canada buy page to know the status of your posting and
-                other related information
+                You'll be required to complete the questionnaire sample
+                questionnaire
             </Text>
             <Link color="blue" isExternal href="/">
-                Click here to register <Icon as={BiLinkExternal} mx="2px" />
+                Click here to fill questionnaire{" "}
+                <Icon as={BiLinkExternal} mx="2px" />
             </Link>
             <Box mt="2rem">
                 <Pages
