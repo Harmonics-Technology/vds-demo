@@ -12,32 +12,43 @@ interface pageProps {
 
 function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
     return (
-        <HStack
-            w="100%"
-            justify="space-between"
-            cursor="pointer"
-            my="1rem"
-            gap="2rem"
-        >
-            <Box w="full">
-                <Link passHref href={`/scaleup003/${prevUrl}` || ""}>
+        <HStack w="100%" justify="center" cursor="pointer" my="3rem" gap="2rem">
+            <Box w={["full", "30%"]}>
+                <Link
+                    passHref
+                    href={
+                        prevTitle == undefined
+                            ? ``
+                            : `/scaleup003/${prevUrl}` || ""
+                    }
+                >
                     <Box
                         w="full"
-                        display={prevTitle == undefined ? "none" : prevTitle}
+                        // display={prevTitle == undefined ? "none" : prevTitle}
                         border="1px solid"
-                        borderColor="gray.300"
+                        borderColor={
+                            prevTitle == undefined ? "gray.100" : "gray.300"
+                        }
                         borderRadius="5px"
                         boxShadow="sm"
-                        _hover={{ borderColor: "blue.400" }}
+                        bgColor={
+                            prevTitle == undefined ? "gray.100" : "brand.100"
+                        }
+                        color="white"
+                        // _hover={{ borderColor: "blue.400" }}
                     >
-                        <Box w="fit-content" mr="auto" p="1rem">
+                        <Box w="fit-content" mx="auto" p=".6rem">
                             <HStack
                                 align="center"
                                 fontSize=".7rem"
-                                justify="flex-end"
+                                justify="flex-center"
                             >
-                                <Icon as={BsArrowLeftShort} />
-                                <Text mb="0" fontWeight="700">
+                                <Text
+                                    mb="0"
+                                    fontWeight="600"
+                                    fontSize="1rem"
+                                    textAlign="center"
+                                >
                                     Previous
                                 </Text>
                             </HStack>
@@ -54,27 +65,45 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                     </Box>
                 </Link>
             </Box>
-            <Box w="full">
-                <Link passHref href={`/scaleup003/${nextUrl}` || ""}>
+            <Box w={["full", "30%"]}>
+                <Link
+                    passHref
+                    href={
+                        nextTitle == undefined
+                            ? ``
+                            : `/scaleup003/${nextUrl}` || ""
+                    }
+                >
                     <Box
                         w="full"
-                        display={nextTitle == undefined ? "none" : nextTitle}
+                        // display={nextTitle == undefined ? "none" : nextTitle}
                         border="1px solid"
-                        borderColor="gray.300"
+                        borderColor={
+                            nextTitle == undefined ? "gray.100" : "gray.300"
+                        }
                         borderRadius="5px"
                         boxShadow="sm"
-                        _hover={{ borderColor: "blue.400" }}
+                        bgColor={
+                            nextTitle == undefined ? "gray.100" : "brand.100"
+                        }
+                        color="white"
+                        // _hover={{ borderColor: "blue.400" }}
                     >
-                        <Box w="fit-content" ml="auto" p="1rem">
+                        <Box w="fit-content" mx="auto" p=".6rem">
                             <HStack
                                 align="center"
                                 fontSize=".7rem"
-                                justify="flex-end"
+                                justify="flex-center"
                             >
-                                <Text mb="0" fontWeight="700">
+                                <Text
+                                    mb="0"
+                                    fontWeight="600"
+                                    fontSize="1rem"
+                                    textAlign="center"
+                                >
                                     Next
                                 </Text>
-                                <Icon as={BsArrowRightShort} />
+                                {/* <Icon as={BsArrowRightShort} /> */}
                             </HStack>
                             {/* <Text
                                 fontSize="1.2rem"

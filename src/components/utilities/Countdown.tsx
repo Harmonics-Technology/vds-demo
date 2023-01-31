@@ -1,6 +1,8 @@
-import { Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { isMobile } from "react-device-detect";
+import useWindowSize from "./useWindowSize";
 // import "./styles.css";
 
 const date = +new Date("2023-02-02") / 1000;
@@ -8,20 +10,14 @@ const minuteSeconds = 60;
 const hourSeconds = 3600;
 const daySeconds = 86400;
 
-const timerProps = {
-    isPlaying: true,
-    size: 120,
-    strokeWidth: 6,
-};
-
 const renderTime = (dimension: any, time: any) => {
     return (
-        <div className="time-wrapper">
-            <Text fontSize="2rem" mb="0">
+        <Box className="time-wrapper">
+            <Text mb="0" fontSize={["1rem", "2rem"]}>
                 {time}
             </Text>
             <div>{dimension}</div>
-        </div>
+        </Box>
     );
 };
 
@@ -38,13 +34,23 @@ export default function Countdown({ hide }: { hide: boolean }) {
     const remainingTime = endTime - stratTime;
     const days = Math.ceil(remainingTime / daySeconds);
     const daysDuration = days * daySeconds;
+    const size = useWindowSize();
+
+    const timerProps = {
+        isPlaying: true,
+        size: size.width != null && size.width <= 590 ? 0 : 120,
+        strokeWidth: 6,
+    };
+    console.log({ isMobile, time: timerProps.size });
 
     return (
         <HStack
-            gap="3rem"
+            gap={["1rem", "3rem"]}
             textAlign="center"
+            justify={["space-evenly", "flex-start"]}
             my="2rem"
             display={!hide ? "none" : "flex"}
+            flexWrap="wrap"
         >
             <CountdownCircleTimer
                 {...timerProps}

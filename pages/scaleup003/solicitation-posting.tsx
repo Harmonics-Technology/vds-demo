@@ -45,7 +45,7 @@ function First() {
             <Link
                 color="blue"
                 isExternal
-                href="https://canadabuys.canada.ca/en"
+                href="https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/pw-22-00985529"
             >
                 Click to view canada buy <Icon as={BiLinkExternal} mx="2px" />
             </Link>

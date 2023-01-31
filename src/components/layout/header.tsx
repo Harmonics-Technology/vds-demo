@@ -20,11 +20,17 @@ function Header() {
             justify="center"
             boxShadow="md"
         >
-            <Flex justify="space-between" w="75%" align="center" h="90%">
+            <Flex
+                justify={["center", "space-between"]}
+                w={["90%", "75%"]}
+                align="center"
+                h="90%"
+                flexDir={["column", "row"]}
+            >
                 <NextLink href="/" passHref>
                     <Image src="/cdlogo.svg" h="1.5rem" cursor="pointer" />
                 </NextLink>
-                <Box>
+                <Box display={["flex", "block"]} mt={["1rem", "0"]}>
                     <HStack justify="flex-end">
                         <NextLink href="en" passHref>
                             <Text
@@ -49,7 +55,7 @@ function Header() {
                             </Text>
                         </NextLink>
                     </HStack>
-                    <Heading>VDS Demo</Heading>
+                    <Heading ml="1rem">VDS Demo</Heading>
                 </Box>
             </Flex>
         </Flex>
