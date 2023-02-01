@@ -54,44 +54,50 @@ const Home: React.FC = () => {
                     title="webinar"
                     bg="gray"
                     status="in progress"
-                    date="01/22/2022"
+                    date="06/02/2022"
                 />
                 <Cards
                     num="3"
                     title="feedback period"
                     bg="yellow.300"
                     status="in progress"
-                    date="04/11/2022"
+                    date="12/02/2022"
                 />
                 <Cards
                     num="4"
                     title="solicitation final"
                     bg="blue.400"
                     status="in progress"
-                    date="04/16/2022"
+                    date="23/02/2022"
                 />
                 <Cards
                     num="5"
                     title="evaluation and interactive session"
                     bg="orange"
                     status="future"
-                    date="05/09/2022"
+                    date="24/02/2022"
                 />
+                <Box h="11.5rem">
+                    <Image src="/vid.png" w="full" h="full" />
+                    {/* <Text textAlign="center" mt="1rem">
+                        Watch video to learn more
+                    </Text> */}
+                </Box>
             </Grid>
-            <Box w={["full", "full"]} mt="3rem">
+            {/* <Box w={["full", "full"]} mt="3rem">
                 <Image src="/vid.png" w="full" />
                 <Text textAlign="center" mt="1rem">
                     Watch video to learn more
                 </Text>
-            </Box>
+            </Box> */}
             <Link passHref href="scaleup003/solicitation-posting">
                 <Button
                     bgColor="brand.100"
                     fontSize="1.2rem"
                     color="white"
                     w={["full", "30%"]}
-                    h="3rem"
-                    mx="auto"
+                    h="3.5rem"
+                    ml="auto"
                     mt="3rem"
                     _hover={{
                         bgColor: "rgb(38,55,74, .8)",

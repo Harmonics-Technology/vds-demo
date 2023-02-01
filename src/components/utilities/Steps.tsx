@@ -47,32 +47,32 @@ function Steps({ value }: { value: number }) {
     const size = useWindowSize();
     return (
         <>
-            {size.width != null && size.width >= 590 && (
-                <ClayMultiStepNav>
-                    {steps.map(
-                        ({ active, complete, onClick, subTitle, title }, i) => (
-                            <ClayMultiStepNav.Item
-                                active={active}
-                                complete={complete}
-                                expand={i + 1 !== steps.length}
-                                key={i}
-                            >
+            <ClayMultiStepNav>
+                {steps.map(
+                    ({ active, complete, onClick, subTitle, title }, i) => (
+                        <ClayMultiStepNav.Item
+                            active={active}
+                            complete={complete}
+                            expand={i + 1 !== steps.length}
+                            key={i}
+                        >
+                            {size.width != null && size.width >= 590 && (
                                 <ClayMultiStepNav.Title>
                                     {title}
                                 </ClayMultiStepNav.Title>
-                                <ClayMultiStepNav.Divider />
-                                <ClayMultiStepNav.Indicator
-                                    complete={complete}
-                                    label={1 + i}
-                                    onClick={onClick}
-                                    // spritemap={spritemap}
-                                    // subTitle={subTitle}
-                                />
-                            </ClayMultiStepNav.Item>
-                        ),
-                    )}
-                </ClayMultiStepNav>
-            )}
+                            )}
+                            <ClayMultiStepNav.Divider />
+                            <ClayMultiStepNav.Indicator
+                                complete={complete}
+                                label={1 + i}
+                                onClick={onClick}
+                                // spritemap={spritemap}
+                                // subTitle={subTitle}
+                            />
+                        </ClayMultiStepNav.Item>
+                    ),
+                )}
+            </ClayMultiStepNav>
         </>
     );
 }

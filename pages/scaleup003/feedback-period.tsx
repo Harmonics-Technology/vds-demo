@@ -20,7 +20,11 @@ function Third() {
                 You'll be required to complete the questionnaire sample
                 questionnaire
             </Text>
-            <Link color="blue" isExternal href="">
+            <Link
+                color="blue"
+                isExternal
+                href="https://www.surveymonkey.com/r/BN3RXG5"
+            >
                 Click here to fill questionnaire{" "}
                 <Icon as={BiLinkExternal} mx="2px" />
             </Link>

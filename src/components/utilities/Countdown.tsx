@@ -5,11 +5,6 @@ import { isMobile } from "react-device-detect";
 import useWindowSize from "./useWindowSize";
 // import "./styles.css";
 
-const date = +new Date("2023-02-02") / 1000;
-const minuteSeconds = 60;
-const hourSeconds = 3600;
-const daySeconds = 86400;
-
 const renderTime = (dimension: any, time: any) => {
     return (
         <Box className="time-wrapper">
@@ -21,13 +16,24 @@ const renderTime = (dimension: any, time: any) => {
     );
 };
 
-const getTimeSeconds = (time: any) => (minuteSeconds - time) | 0;
-const getTimeMinutes = (time: any) =>
-    ((time % hourSeconds) / minuteSeconds) | 0;
-const getTimeHours = (time: any) => ((time % daySeconds) / hourSeconds) | 0;
-const getTimeDays = (time: any) => (time / daySeconds) | 0;
+export default function Countdown({
+    hide,
+    time,
+}: {
+    hide: boolean;
+    time: string;
+}) {
+    const date = +new Date(time) / 1000;
+    const minuteSeconds = 60;
+    const hourSeconds = 3600;
+    const daySeconds = 86400;
 
-export default function Countdown({ hide }: { hide: boolean }) {
+    const getTimeSeconds = (time: any) => (minuteSeconds - time) | 0;
+    const getTimeMinutes = (time: any) =>
+        ((time % hourSeconds) / minuteSeconds) | 0;
+    const getTimeHours = (time: any) => ((time % daySeconds) / hourSeconds) | 0;
+    const getTimeDays = (time: any) => (time / daySeconds) | 0;
+
     const stratTime = Math.round(+new Date() / 1000); // use UNIX timestamp in seconds
     const endTime = Math.round(date); // use UNIX timestamp in seconds
 

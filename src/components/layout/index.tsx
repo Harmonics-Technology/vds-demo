@@ -11,14 +11,19 @@ function Layout({ children }: { children: React.ReactNode }) {
     return (
         <Box bgColor={gray ? "gray.200" : "white"}>
             <Header />
-            <Box w="75%" mx="auto" mt="2rem" pb="5rem">
+            <Box w={["85%", "75%"]} mx="auto" mt="2rem" pb="5rem">
                 <Button
                     onClick={() => router.back()}
                     variant="solid"
+                    bgColor="brand.100"
+                    color="white"
                     mb="1rem"
                     fontSize=".9rem"
                     leftIcon={<MdOutlineArrowBackIos />}
-                    display={home ? "none" : "flex"}
+                    display={["none", home ? "none" : "flex"]}
+                    _hover={{
+                        bgColor: "rgb(38,55,74, .8)",
+                    }}
                 >
                     Back
                 </Button>
