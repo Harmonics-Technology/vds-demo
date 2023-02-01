@@ -24,7 +24,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 >
                     <Box
                         w="full"
-                        // display={prevTitle == undefined ? "none" : prevTitle}
+                        display={prevTitle == undefined ? "none" : prevTitle}
                         border="1px solid"
                         borderColor={
                             prevTitle == undefined ? "gray.100" : "gray.300"
@@ -76,7 +76,7 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 >
                     <Box
                         w="full"
-                        // display={nextTitle == undefined ? "none" : nextTitle}
+                        display={nextTitle == undefined ? "none" : nextTitle}
                         border="1px solid"
                         borderColor={
                             nextTitle == undefined ? "gray.100" : "gray.300"

@@ -36,7 +36,7 @@ function First() {
                 gap="2rem"
                 flexDir={["column", "row"]}
             >
-                <Box w={["full", "60%"]}>
+                <Box w={["full", "full"]}>
                     {/* <Progress value={20} /> */}
                     <Breadcrumbs />
                     <Heading textTransform="capitalize">{pageName}</Heading>
@@ -77,12 +77,6 @@ function First() {
                 easy to navigate, try it and see what happens. <br />
                 You can click next to see the next stage"
             /> */}
-                </Box>
-                <Box w={["full", "40%"]} mt="3rem">
-                    <Image src="/vid.png" w="full" />
-                    <Text textAlign="center" mt="1rem">
-                        Watch video to learn more
-                    </Text>
                 </Box>
             </Flex>
             <Box mt="2rem">

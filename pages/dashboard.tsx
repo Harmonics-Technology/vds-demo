@@ -1,5 +1,14 @@
 import React from "react";
-import { Spacer, Flex, Heading, Grid, Button } from "@chakra-ui/react";
+import {
+    Spacer,
+    Flex,
+    Heading,
+    Grid,
+    Button,
+    Box,
+    Text,
+    Image,
+} from "@chakra-ui/react";
 import { Cards } from "@components/utilities/Cards";
 import Link from "next/link";
 
@@ -14,7 +23,7 @@ const Home: React.FC = () => {
                 <Heading textAlign="left" textTransform="uppercase" mb="0">
                     Scaleup0003
                 </Heading>
-                <Link passHref href="scaleup003/solicitation-posting">
+                {/* <Link passHref href="scaleup003/solicitation-posting">
                     <Button
                         bgColor="brand.100"
                         fontSize="1.2rem"
@@ -26,7 +35,7 @@ const Home: React.FC = () => {
                     >
                         Get Started
                     </Button>
-                </Link>
+                </Link> */}
             </Flex>
             <Grid
                 templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
@@ -43,6 +52,12 @@ const Home: React.FC = () => {
                     bg="orange"
                 />
             </Grid>
+            <Box w={["full", "full"]} mt="3rem">
+                <Image src="/vid.png" w="full" />
+                <Text textAlign="center" mt="1rem">
+                    Watch video to learn more
+                </Text>
+            </Box>
             <Link passHref href="scaleup003/solicitation-posting">
                 <Button
                     bgColor="brand.100"
@@ -50,7 +65,7 @@ const Home: React.FC = () => {
                     color="white"
                     w={["full", "30%"]}
                     h="3rem"
-                    ml="auto"
+                    mx="auto"
                     mt="3rem"
                 >
                     Get Started
