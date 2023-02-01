@@ -20,7 +20,7 @@ import Link from "next/link";
 const Home: React.FC = () => {
     return (
         <Flex direction="column" minH="100vh">
-            <Box w={["full", "80%"]} boxShadow="md" mx="auto">
+            <Box w={["full", "100%"]}>
                 <Box
                     w="full"
                     h="10rem"
@@ -29,7 +29,13 @@ const Home: React.FC = () => {
                 >
                     <Image src="/cdb.jpg" w="full" h="full" objectFit="cover" />
                 </Box>
-                <Box w="full" p="1rem">
+                <Box
+                    w="full"
+                    p="2rem 1rem"
+                    mt="4rem"
+                    boxShadow="md"
+                    bgColor="white"
+                >
                     <Text fontSize="1.3rem" fontWeight="bold">
                         Automated Bidding Solution (Bid on the phone)
                     </Text>
@@ -56,6 +62,9 @@ const Home: React.FC = () => {
                                 borderRadius="0"
                                 fontSize=".8rem"
                                 px="2rem"
+                                _hover={{
+                                    bgColor: "rgb(38,55,74, .8)",
+                                }}
                             >
                                 Proceed
                             </Button>

@@ -42,14 +42,40 @@ const Home: React.FC = () => {
                 gap="3rem"
                 mt="3rem"
             >
-                <Cards num="1" title="solicitation posting" bg="orange" />
-                <Cards num="2" title="webinar" bg="gray" />
-                <Cards num="3" title="feedback period" bg="yellow.300" />
-                <Cards num="4" title="solicitation final" bg="blue.400" />
+                <Cards
+                    num="1"
+                    title="solicitation posting"
+                    bg="orange"
+                    status="completed"
+                    date="01/02/2022"
+                />
+                <Cards
+                    num="2"
+                    title="webinar"
+                    bg="gray"
+                    status="in progress"
+                    date="01/22/2022"
+                />
+                <Cards
+                    num="3"
+                    title="feedback period"
+                    bg="yellow.300"
+                    status="in progress"
+                    date="04/11/2022"
+                />
+                <Cards
+                    num="4"
+                    title="solicitation final"
+                    bg="blue.400"
+                    status="in progress"
+                    date="04/16/2022"
+                />
                 <Cards
                     num="5"
                     title="evaluation and interactive session"
                     bg="orange"
+                    status="future"
+                    date="05/09/2022"
                 />
             </Grid>
             <Box w={["full", "full"]} mt="3rem">
@@ -67,6 +93,9 @@ const Home: React.FC = () => {
                     h="3rem"
                     mx="auto"
                     mt="3rem"
+                    _hover={{
+                        bgColor: "rgb(38,55,74, .8)",
+                    }}
                 >
                     Get Started
                 </Button>

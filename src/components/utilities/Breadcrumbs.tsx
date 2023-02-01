@@ -11,17 +11,22 @@ import {
 import { useRouter } from "next/router";
 import React from "react";
 import { FiChevronsRight } from "react-icons/fi";
+import useWindowSize from "./useWindowSize";
 
 function Breadcrumbs() {
     const router = useRouter();
     const parent = router.asPath.split("/")[1];
     const childPage = router.asPath.split("/");
     // console.log({ childPage });
+    const size = useWindowSize();
     return (
         <>
             <Breadcrumb
                 separator={<Icon as={FiChevronsRight} color="gray.500" />}
                 mb="1rem"
+                display={
+                    size.width != null && size.width <= 590 ? "none" : "block"
+                }
             >
                 {childPage.slice(1).map((child) => (
                     <BreadcrumbItem>

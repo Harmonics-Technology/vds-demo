@@ -7,10 +7,11 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 function Layout({ children }: { children: React.ReactNode }) {
     const router = useRouter();
     const home = router.asPath == "/";
+    const gray = router.asPath == "/dashboard" || router.asPath == "/";
     return (
-        <div>
+        <Box bgColor={gray ? "gray.200" : "white"}>
             <Header />
-            <Box w="75%" mx="auto" mt="2rem" mb="5rem">
+            <Box w="75%" mx="auto" mt="2rem" pb="5rem">
                 <Button
                     onClick={() => router.back()}
                     variant="solid"
@@ -23,7 +24,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 </Button>
                 {children}
             </Box>
-        </div>
+        </Box>
     );
 }
 
