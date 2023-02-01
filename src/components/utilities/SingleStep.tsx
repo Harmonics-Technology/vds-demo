@@ -34,6 +34,9 @@ export const SingleSTep = ({
                         </Text>
                         <Text mb="0">{subtitle}</Text>
                     </Box>
+                    <Text w="full" display={["block", "none"]}>
+                        {sideText}
+                    </Text>
                     {icon && (
                         <Icon
                             as={RiArrowDownFill}
@@ -43,7 +46,9 @@ export const SingleSTep = ({
                         />
                     )}
                 </Box>
-                <Text w="full">{sideText}</Text>
+                <Text w="full" display={["none", "block"]}>
+                    {sideText}
+                </Text>
             </Flex>
         </Box>
     );

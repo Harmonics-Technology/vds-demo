@@ -5,7 +5,7 @@ import { SingleSTep } from "./SingleStep";
 
 export const PostContract = () => {
     return (
-        <VStack w="100%" mt="3rem">
+        <VStack w="100%" mt="3rem" pb={["3rem", "0"]}>
             <SingleSTep
                 title="Contract Award"
                 bg="#94b8e2"
