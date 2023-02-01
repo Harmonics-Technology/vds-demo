@@ -30,8 +30,13 @@ function First() {
     return (
         <>
             <Steps value={0} />
-            <Flex w="full" justify="space-between" gap="2rem">
-                <Box w="60%">
+            <Flex
+                w="full"
+                justify="space-between"
+                gap="2rem"
+                flexDir={["column", "row"]}
+            >
+                <Box w={["full", "60%"]}>
                     {/* <Progress value={20} /> */}
                     <Breadcrumbs />
                     <Heading textTransform="capitalize">{pageName}</Heading>
@@ -73,7 +78,7 @@ function First() {
                 You can click next to see the next stage"
             /> */}
                 </Box>
-                <Box w="40%" mt="3rem">
+                <Box w={["full", "40%"]} mt="3rem">
                     <Image src="/vid.png" w="full" />
                     <Text textAlign="center" mt="1rem">
                         Watch video to learn more
