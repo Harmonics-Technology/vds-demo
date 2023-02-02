@@ -29,8 +29,7 @@ export const PostContract = () => {
             <SingleSTep
                 title="WS-03 (Optional)"
                 subtitle="Implementation"
-                sideText="The Contractor must demonstrate that its solution
-                meets the WS-03 MVR listed in section 8.4. The chosen solution(s) that has been customized to
+                sideText="The chosen solution(s) that has been customized to
                 satisfy specific needs will then be further incrementally configured to add a “configuration by
                 buyers” functionality and will be tested and used by buyers and suppliers for bid submission
                 forms (BSF)."

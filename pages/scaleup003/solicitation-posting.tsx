@@ -1,4 +1,13 @@
-import { Box, Heading, Text, Link, Icon, Flex, Image } from "@chakra-ui/react";
+import {
+    Box,
+    Heading,
+    Text,
+    Link,
+    Icon,
+    Flex,
+    Image,
+    HStack,
+} from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
 import NextLink from "next/link";
@@ -9,6 +18,7 @@ import { Progress } from "@chakra-ui/react";
 import Steps from "@components/utilities/Steps";
 import dynamic from "next/dynamic";
 import { PageStatus } from "@components/utilities/PageStatus";
+import Countdown from "@components/utilities/Countdown";
 // const Speech = dynamic(() => import("react-speech"), { ssr: false });
 
 function First() {
@@ -30,6 +40,12 @@ function First() {
     };
     return (
         <>
+            <HStack justify={["center", "flex-end"]} mb={["2rem", "3rem"]}>
+                {/* <Heading textAlign="left" textTransform="uppercase" mb="0">
+                    Scaleup0003
+                </Heading> */}
+                <Countdown hide={true} time="2023-02-03" />
+            </HStack>
             <Steps value={0} />
             <Flex
                 w="full"
