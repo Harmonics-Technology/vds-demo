@@ -34,8 +34,7 @@ function Header() {
                 // flexDir={["column", "row"]}
             >
                 <NextLink href="/" passHref>
-                    {/* <Box w="2rem"> */}
-                    <>
+                    <Box>
                         <Image
                             src="/cdlogo.svg"
                             h="1.5rem"
@@ -48,8 +47,7 @@ function Header() {
                             cursor="pointer"
                             display={["block", "none"]}
                         />
-                    </>
-                    {/* </Box> */}
+                    </Box>
                 </NextLink>
                 <Box display={["none", "block"]} mt={["1rem", "0"]}>
                     <HStack justify="flex-end">
