@@ -14,11 +14,11 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Box
                 w={["85%", "75%"]}
                 mx="auto"
-                mt="2rem"
+                mt="1.5rem"
                 pb={["5rem", "5rem"]}
                 mb={["3rem", "0"]}
             >
-                <Button
+                {/* <Button
                     onClick={() => router.back()}
                     variant="solid"
                     bgColor="brand.100"
@@ -32,7 +32,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                     }}
                 >
                     Back
-                </Button>
+                </Button> */}
                 {children}
             </Box>
         </Box>
