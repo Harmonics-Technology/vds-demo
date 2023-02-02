@@ -16,7 +16,7 @@ export const Cards = ({ num, title, bg, status, date }: pageProps) => {
         <Link passHref href={`scaleup003/${title.replaceAll(" ", "-")}`}>
             <Flex
                 w="full"
-                minH="15rem"
+                minH="5rem"
                 // boxShadow="lg"
                 borderRadius="10px"
                 p="1rem"
@@ -48,7 +48,7 @@ export const Cards = ({ num, title, bg, status, date }: pageProps) => {
                             {num}
                         </Text>
                     </Circle>
-                    <Heading textTransform="capitalize" fontSize="1.5rem">
+                    <Heading textTransform="capitalize" fontSize="1.3rem">
                         {title}
                     </Heading>
                 </Box>

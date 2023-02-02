@@ -43,9 +43,9 @@ function Fourth() {
 
             <Box mt="2rem">
                 <Pages
-                    prevTitle="solicitation final"
                     nextTitle="evaluation and interactive session"
                     nextUrl="evaluation-and-interactive-session"
+                    prevTitle="solicitation final"
                     prevUrl="solicitation-final"
                 />
             </Box>

@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link, Icon, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Icon, Flex, HStack } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Countdown from "@components/utilities/Countdown";
 import Pages from "@components/utilities/Pages";
@@ -17,6 +17,9 @@ function Fifth() {
 
     return (
         <Box>
+            <HStack justify={["center", "flex-end"]} mb={["2rem", "3rem"]}>
+                <Countdown hide={true} time="2023-02-03" />
+            </HStack>
             <Steps value={4} />
             <Flex align="center" justify={["flex-end", "space-between"]}>
                 <Breadcrumbs />
@@ -62,8 +65,8 @@ function Fifth() {
             <PostContract />
             <Box mt="2rem">
                 <Pages
-                    prevTitle="bid closing"
-                    prevUrl="solicitation-final/bid-closing"
+                    prevTitle="solicitation final"
+                    prevUrl="solicitation-final"
                 />
             </Box>
         </Box>

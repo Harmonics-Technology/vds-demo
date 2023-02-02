@@ -8,19 +8,25 @@ import {
     Box,
     Text,
     Image,
+    HStack,
 } from "@chakra-ui/react";
 import { Cards } from "@components/utilities/Cards";
 import Link from "next/link";
+import Countdown from "@components/utilities/Countdown";
 
 const Home: React.FC = () => {
     return (
-        <Flex direction="column" minH="100vh">
+        <Flex direction="column" minH="70vh">
             <Flex
                 justify={["center", "space-between"]}
                 align="center"
                 flexDirection={["column", "row"]}
             >
-                <Heading textAlign="left" textTransform="uppercase" mb="0">
+                <Heading
+                    textAlign="left"
+                    textTransform="uppercase"
+                    mb={["1rem", "0"]}
+                >
                     Scaleup0003
                 </Heading>
                 {/* <Link passHref href="scaleup003/solicitation-posting">
@@ -36,11 +42,14 @@ const Home: React.FC = () => {
                         Get Started
                     </Button>
                 </Link> */}
+                <HStack mb={["2rem", "0"]}>
+                    <Countdown hide={true} time="2023-02-03" />
+                </HStack>
             </Flex>
             <Grid
-                templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
-                gap="3rem"
-                mt="3rem"
+                templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]}
+                gap="1rem"
+                mt="1.5rem"
             >
                 <Cards
                     num="1"
@@ -77,10 +86,21 @@ const Home: React.FC = () => {
                     status="future"
                     date="24/02/2022"
                 />
-                <Box h="15rem">
+                <Box h="auto" pos="relative">
                     <Image src="/vid.png" w="full" h="full" objectFit="cover" />
-                    <Text textAlign="center" mt="1rem">
-                        Watch the video to learn more about the solicitation
+                    <Text
+                        textAlign="center"
+                        mt="1rem"
+                        pos="absolute"
+                        bottom="0"
+                        color="white"
+                        border="2px solid white"
+                        p=".5rem"
+                        w="80%"
+                        left="50%"
+                        transform="translateX(-50%)"
+                    >
+                        Watch video to learn more
                     </Text>
                 </Box>
             </Grid>
@@ -97,8 +117,8 @@ const Home: React.FC = () => {
                     color="white"
                     w={["full", "100%"]}
                     h="3.5rem"
-                    ml="auto"
-                    mt={["3rem", "4rem"]}
+                    mx="auto"
+                    mt={["3rem", "3rem"]}
                     _hover={{
                         bgColor: "rgb(38,55,74, .8)",
                     }}

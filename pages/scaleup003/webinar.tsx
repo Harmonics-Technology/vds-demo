@@ -1,5 +1,15 @@
-import { Box, Heading, Text, Link, Icon, Image, Flex } from "@chakra-ui/react";
+import {
+    Box,
+    Heading,
+    Text,
+    Link,
+    Icon,
+    Image,
+    Flex,
+    HStack,
+} from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
+import Countdown from "@components/utilities/Countdown";
 import Pages from "@components/utilities/Pages";
 import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
@@ -13,6 +23,9 @@ function Second() {
     const pageName = router.asPath.split("/")[2].replaceAll("-", " ");
     return (
         <Box>
+            <HStack justify={["center", "flex-end"]} mb={["2rem", "3rem"]}>
+                <Countdown hide={true} time="2023-02-03" />
+            </HStack>
             <Steps value={1} />
             <Flex align="center" justify={["flex-end", "space-between"]}>
                 <Breadcrumbs />
