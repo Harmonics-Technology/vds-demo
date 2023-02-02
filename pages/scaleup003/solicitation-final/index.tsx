@@ -36,8 +36,8 @@ function Third() {
                 you must download and open the form using Adobe Reader DC or
                 higher. Any other software may result the form to malfunction
                 and/or erase the digital signatures. <br />
-                <br />· Financial Bid Form (attached to the solicitation)
-                notice/email
+                <br />· Financial Bid Form (attached to the solicitation
+                notice/email)
             </Text>
             {/* <TableContainer>
                 <Table border="1px solid">
