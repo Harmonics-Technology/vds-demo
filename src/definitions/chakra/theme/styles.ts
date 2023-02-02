@@ -12,7 +12,7 @@ export default {
             },
             p: {
                 marginBottom: "1em",
-                fontFamily: "'Lato', sans-serif",
+                fontFamily: "'Noto Sans', sans-serif",
             },
         },
     },

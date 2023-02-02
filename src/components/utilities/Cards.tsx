@@ -14,9 +14,9 @@ interface pageProps {
 export const Cards = ({ num, title, bg, status, date }: pageProps) => {
     return (
         <Link passHref href={`scaleup003/${title.replaceAll(" ", "-")}`}>
-            <Box
+            <Flex
                 w="full"
-                minH="5rem"
+                minH="15rem"
                 // boxShadow="lg"
                 borderRadius="10px"
                 p="1rem"
@@ -25,29 +25,33 @@ export const Cards = ({ num, title, bg, status, date }: pageProps) => {
                 bgColor="white"
                 cursor="pointer"
                 role="group"
+                flexDir="column"
+                justify="space-between"
                 _hover={{
                     bgColor: "brand.100",
                     color: "white",
                 }}
             >
-                <Circle
-                    size="3rem"
-                    border="2px solid"
-                    borderColor="brand.100"
-                    alignItems="center"
-                    justifyContent="center"
-                    mb="1rem"
-                    _groupHover={{
-                        borderColor: "white",
-                    }}
-                >
-                    <Text fontSize="1.4rem" mb="0" fontWeight="bold">
-                        {num}
-                    </Text>
-                </Circle>
-                <Heading textTransform="capitalize" fontSize="1.5rem">
-                    {title}
-                </Heading>
+                <Box>
+                    <Circle
+                        size="3rem"
+                        border="2px solid"
+                        borderColor="brand.100"
+                        alignItems="center"
+                        justifyContent="center"
+                        mb="1rem"
+                        _groupHover={{
+                            borderColor: "white",
+                        }}
+                    >
+                        <Text fontSize="1.4rem" mb="0" fontWeight="bold">
+                            {num}
+                        </Text>
+                    </Circle>
+                    <Heading textTransform="capitalize" fontSize="1.5rem">
+                        {title}
+                    </Heading>
+                </Box>
 
                 <Flex justify="space-between" align="center" mt="2rem">
                     <Text
@@ -93,7 +97,7 @@ export const Cards = ({ num, title, bg, status, date }: pageProps) => {
                         {/* <Icon as={BsArrowRightShort} /> */}
                     </Flex>
                 </Flex>
-            </Box>
+            </Flex>
         </Link>
     );
 };

@@ -38,11 +38,15 @@ function Third() {
             <Text mt="1rem">
                 You are requested to submit the following documents in separate
                 file attachments as their bids: <br />
-                <br />· ScaleUp Bid Submission Form (PDF Form); Important Note:
-                This form uses special features – therefore, in order to use it
-                you must download and open the form using Adobe Reader DC or
-                higher. Any other software may result the form to malfunction
-                and/or erase the digital signatures. <br />
+                <br />· ScaleUp Bid Submission Form (PDF Form); <br />
+                <br />
+                <strong>
+                    Important Note: This form uses special features – therefore,
+                    in order to use it you must download and open the form using
+                    Adobe Reader DC or higher. Any other software may result the
+                    form to malfunction and/or erase the digital signatures.
+                </strong>{" "}
+                <br />
                 <br />· Financial Bid Form (attached to the solicitation
                 notice/email)
             </Text>

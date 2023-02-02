@@ -1,7 +1,7 @@
 import type { DeepPartial, Theme } from "@chakra-ui/react";
 
 const fonts: DeepPartial<Theme["fonts"]> = {
-    body: "'Lato', sans-serif",
+    body: "'Noto Sans', sans-serif",
     heading: "'Lato', sans-serif",
 };
 
