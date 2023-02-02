@@ -3,7 +3,7 @@ import React from "react";
 
 export const PageStatus = ({ status, bg }: { status: string; bg: string }) => {
     return (
-        <VStack>
+        <VStack mb={["1rem", "0"]}>
             <Text mb="0" display={["none", "block"]}>
                 Status
             </Text>
