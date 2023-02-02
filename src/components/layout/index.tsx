@@ -11,7 +11,13 @@ function Layout({ children }: { children: React.ReactNode }) {
     return (
         <Box bgColor={gray ? "gray.200" : "white"}>
             <Header />
-            <Box w={["85%", "75%"]} mx="auto" mt="2rem" pb="5rem">
+            <Box
+                w={["85%", "75%"]}
+                mx="auto"
+                mt="2rem"
+                pb={["5rem", "5rem"]}
+                mb={["3rem", "0"]}
+            >
                 <Button
                     onClick={() => router.back()}
                     variant="solid"

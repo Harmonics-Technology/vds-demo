@@ -77,11 +77,11 @@ const Home: React.FC = () => {
                     status="future"
                     date="24/02/2022"
                 />
-                <Box h="11.5rem">
+                <Box h="15rem">
                     <Image src="/vid.png" w="full" h="full" objectFit="cover" />
-                    {/* <Text textAlign="center" mt="1rem">
-                        Watch video to learn more
-                    </Text> */}
+                    <Text textAlign="center" mt="1rem">
+                        Watch the video to learn more about the solicitation
+                    </Text>
                 </Box>
             </Grid>
             {/* <Box w={["full", "full"]} mt="3rem">
@@ -95,10 +95,10 @@ const Home: React.FC = () => {
                     bgColor="brand.100"
                     fontSize="1.2rem"
                     color="white"
-                    w={["full", "30%"]}
+                    w={["full", "100%"]}
                     h="3.5rem"
                     ml="auto"
-                    mt="3rem"
+                    mt={["3rem", "4rem"]}
                     _hover={{
                         bgColor: "rgb(38,55,74, .8)",
                     }}

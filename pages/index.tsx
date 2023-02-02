@@ -40,21 +40,27 @@ const Home: React.FC = () => {
                     <Text fontSize="1.3rem" fontWeight="bold">
                         Automated Bidding Solution (Bid on the phone)
                     </Text>
-                    <HStack my=".5rem">
+                    <HStack>
                         <Icon as={GoFileSubmodule} />
-                        <Text>Solicitation number: SCALEUP003</Text>
+                        <Text fontWeight="bold">
+                            Solicitation number: SCALEUP003
+                        </Text>
                     </HStack>
-                    <HStack>
+                    <HStack my=".5rem">
                         <Icon as={AiTwotoneCalendar} />
-                        <Text>Publication date: Feburary 11, 2022</Text>
+                        <Text fontWeight="bold">
+                            Publication date: Feburary 11, 2022
+                        </Text>
                     </HStack>
-                    <HStack>
+                    <HStack mb=".5rem">
                         <Icon as={FaMoneyBillAlt} />
-                        <Text>Last amendment date: 2022/02/21</Text>
+                        <Text fontWeight="bold">
+                            Last amendment date: 2022/02/21
+                        </Text>
                     </HStack>
                     <HStack>
                         <Icon as={MdTimerOff} />
-                        <Text>
+                        <Text fontWeight="bold">
                             Closing Date and Time: Feburary 23, 2022 at 14:00
                             Eastern Daylight Time UTC-4
                         </Text>
