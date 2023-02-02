@@ -11,9 +11,12 @@ import {
     Tr,
     Td,
     TableContainer,
+    Flex,
+    VStack,
 } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
+import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -26,8 +29,12 @@ function Third() {
     return (
         <Box>
             <Steps value={2.5} />
-            <Breadcrumbs />
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="yellow.500" status="In Progress" />
+            </Flex>
             <Heading textTransform="capitalize">{pageName}</Heading>
+
             <Text mt="1rem">
                 You are requested to submit the following documents in separate
                 file attachments as their bids: <br />

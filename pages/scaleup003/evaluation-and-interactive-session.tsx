@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Icon, Flex } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Countdown from "@components/utilities/Countdown";
 import Pages from "@components/utilities/Pages";
@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { ClayToggle } from "@clayui/form";
 import { PostContract } from "@components/utilities/PostContract";
+import { PageStatus } from "@components/utilities/PageStatus";
 // import "@clayui/css";
 
 function Fifth() {
@@ -17,7 +18,10 @@ function Fifth() {
     return (
         <Box>
             <Steps value={4} />
-            <Breadcrumbs />
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="gray.500" status="Future" />
+            </Flex>
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text></Text>
             As part of submitting your bid, you will have self-assessed your

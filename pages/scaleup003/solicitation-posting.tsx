@@ -8,6 +8,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { Progress } from "@chakra-ui/react";
 import Steps from "@components/utilities/Steps";
 import dynamic from "next/dynamic";
+import { PageStatus } from "@components/utilities/PageStatus";
 // const Speech = dynamic(() => import("react-speech"), { ssr: false });
 
 function First() {
@@ -38,7 +39,13 @@ function First() {
             >
                 <Box w={["full", "full"]}>
                     {/* <Progress value={20} /> */}
-                    <Breadcrumbs />
+                    <Flex
+                        align="center"
+                        justify={["flex-end", "space-between"]}
+                    >
+                        <Breadcrumbs />
+                        <PageStatus bg="green.500" status="Completed" />
+                    </Flex>
                     <Heading textTransform="capitalize">{pageName}</Heading>
                     <Text mt="1rem">
                         The Government of Canada currently lacks the ability to

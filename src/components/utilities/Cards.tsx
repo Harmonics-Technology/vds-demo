@@ -72,8 +72,8 @@ export const Cards = ({ num, title, bg, status, date }: pageProps) => {
                             status == "in progress"
                                 ? "yellow.500"
                                 : status == "completed"
-                                ? "green"
-                                : "red"
+                                ? "green.500"
+                                : "gray.500"
                         }
                         _groupHover={{
                             color: "white",

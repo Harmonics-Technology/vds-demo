@@ -1,6 +1,7 @@
 import { Box, Heading, Text, Link, Icon, Image, Flex } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
+import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -13,7 +14,10 @@ function Second() {
     return (
         <Box>
             <Steps value={1} />
-            <Breadcrumbs />
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="yellow.500" status="In Progress" />
+            </Flex>
             <Flex>
                 <Box w="full">
                     <Heading textTransform="capitalize">{pageName}</Heading>
