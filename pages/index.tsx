@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                             Eastern Daylight Time UTC-4
                         </Text>
                     </HStack>
-                    <Flex justify="flex-end" mt="2rem">
+                    <Flex justify="flex-end" mt={["2rem", "-2rem"]}>
                         <Link passHref href="/dashboard">
                             <Button
                                 bgColor="brand.100"
