@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                     date="24/02/2022"
                 />
                 <Box h="11.5rem">
-                    <Image src="/vid.png" w="full" h="full" />
+                    <Image src="/vid.png" w="full" h="full" objectFit="cover" />
                     {/* <Text textAlign="center" mt="1rem">
                         Watch video to learn more
                     </Text> */}
