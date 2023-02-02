@@ -1,6 +1,7 @@
-import { Box, Heading, Text, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Icon, Image, Flex } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
+import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -13,15 +14,40 @@ function Second() {
     return (
         <Box>
             <Steps value={1} />
-            <Breadcrumbs />
-            <Heading textTransform="capitalize">{pageName}</Heading>
-            <Text mt="1rem">
-                This is the proposed agenda and the image below will guide you
-                through
-            </Text>
-
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="yellow.500" status="In Progress" />
+            </Flex>
+            <Flex>
+                <Box w="full">
+                    <Heading textTransform="capitalize">{pageName}</Heading>
+                    <Text mt="1rem">
+                        The objective of this presentation is to provide
+                        complementary information regarding Solicitation No.:
+                        SCALEUP003 for an Automated Bidding Solution (ABS).
+                        <br />
+                        <br />
+                        This presentation does not replace or modify any
+                        provisions of the contract relation to the solicitation
+                        mentioned above. <br />
+                        <br />
+                        In case of contradiction between this presentation and
+                        the contract, the terms and conditions of the contract
+                        document take precedence
+                        <br />
+                        <br /> This is the proposed agenda and the image below
+                        will guide you through
+                    </Text>
+                </Box>
+            </Flex>
+            <Box w="full">
+                <Image src="/abs.png" w="full" />
+            </Box>
             <Link
                 color="blue"
+                mx="auto"
+                w="fit-content"
+                display="block"
                 isExternal
                 href="https://supplier-fournisseur-sscp2pspc.ssc-spc.gc.ca/page.aspx/en/sup/registration_extranet_manage"
             >

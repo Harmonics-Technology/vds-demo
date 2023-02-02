@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react";
+import { Box, Circle, Flex, Heading, Icon, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
@@ -7,52 +7,93 @@ interface pageProps {
     num?: string;
     title: string;
     bg: string;
+    status: string;
+    date: string;
 }
 
-export const Cards = ({ num, title, bg }: pageProps) => {
+export const Cards = ({ num, title, bg, status, date }: pageProps) => {
     return (
-        <Box
-            w="full"
-            minH="5rem"
-            // boxShadow="lg"
-            borderRadius="10px"
-            p="1rem"
-            border="1px solid"
-            borderColor="gray.300"
-        >
-            <Text
-                bgColor={bg}
-                color={bg == "yellow" ? "black" : "white"}
-                p=".2rem 2rem .2rem 1rem"
-                w="fit-content"
-                fontSize=".9rem"
+        <Link passHref href={`scaleup003/${title.replaceAll(" ", "-")}`}>
+            <Box
+                w="full"
+                minH="5rem"
+                // boxShadow="lg"
+                borderRadius="10px"
+                p="1rem"
+                border="1px solid"
+                borderColor="gray.300"
+                bgColor="white"
+                cursor="pointer"
+                role="group"
+                _hover={{
+                    bgColor: "brand.100",
+                    color: "white",
+                }}
             >
-                Stage {num}
-            </Text>
-            <Heading textTransform="capitalize">{title}</Heading>
-            <Link passHref href={`scaleup003/${title.replaceAll(" ", "-")}`}>
-                <Flex
-                    role="group"
-                    transition="all .5s ease"
-                    mt="2rem"
-                    align="center"
-                    cursor="pointer"
-                    justify="flex-end"
-                    color="yellow.600"
+                <Circle
+                    size="3rem"
+                    border="2px solid"
+                    borderColor="brand.100"
+                    alignItems="center"
+                    justifyContent="center"
+                    mb="1rem"
+                    _groupHover={{
+                        borderColor: "white",
+                    }}
                 >
+                    <Text fontSize="1.4rem" mb="0" fontWeight="bold">
+                        {num}
+                    </Text>
+                </Circle>
+                <Heading textTransform="capitalize" fontSize="1.5rem">
+                    {title}
+                </Heading>
+
+                <Flex justify="space-between" align="center" mt="2rem">
                     <Text
-                        fontSize=".8rem"
+                        fontSize=".7rem"
+                        color="gray.400"
                         mb="0"
-                        textAlign="right"
+                        _groupHover={{ color: "white" }}
+                    >
+                        Date: {date}
+                    </Text>
+                    <Flex
+                        transition="all .5s ease"
+                        align="center"
+                        cursor="pointer"
+                        justify="center"
+                        color="white"
+                        w="fit-content"
+                        px="2rem"
+                        h="2rem"
+                        borderRadius="20px"
+                        bgColor={
+                            status == "in progress"
+                                ? "yellow.500"
+                                : status == "completed"
+                                ? "green.500"
+                                : "gray.500"
+                        }
                         _groupHover={{
-                            pr: ".3rem",
+                            color: "white",
                         }}
                     >
-                        Expand
-                    </Text>
-                    <Icon as={BsArrowRightShort} />
+                        <Text
+                            fontSize="1rem"
+                            mb="0"
+                            textAlign="right"
+                            textTransform="capitalize"
+                            _groupHover={{
+                                pr: ".3rem",
+                            }}
+                        >
+                            {status}
+                        </Text>
+                        {/* <Icon as={BsArrowRightShort} /> */}
+                    </Flex>
                 </Flex>
-            </Link>
-        </Box>
+            </Box>
+        </Link>
     );
 };

@@ -8,6 +8,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { Progress } from "@chakra-ui/react";
 import Steps from "@components/utilities/Steps";
 import dynamic from "next/dynamic";
+import { PageStatus } from "@components/utilities/PageStatus";
 // const Speech = dynamic(() => import("react-speech"), { ssr: false });
 
 function First() {
@@ -36,9 +37,15 @@ function First() {
                 gap="2rem"
                 flexDir={["column", "row"]}
             >
-                <Box w={["full", "60%"]}>
+                <Box w={["full", "full"]}>
                     {/* <Progress value={20} /> */}
-                    <Breadcrumbs />
+                    <Flex
+                        align="center"
+                        justify={["flex-end", "space-between"]}
+                    >
+                        <Breadcrumbs />
+                        <PageStatus bg="green.500" status="Completed" />
+                    </Flex>
                     <Heading textTransform="capitalize">{pageName}</Heading>
                     <Text mt="1rem">
                         The Government of Canada currently lacks the ability to
@@ -77,12 +84,6 @@ function First() {
                 easy to navigate, try it and see what happens. <br />
                 You can click next to see the next stage"
             /> */}
-                </Box>
-                <Box w={["full", "40%"]} mt="3rem">
-                    <Image src="/vid.png" w="full" />
-                    <Text textAlign="center" mt="1rem">
-                        Watch video to learn more
-                    </Text>
                 </Box>
             </Flex>
             <Box mt="2rem">

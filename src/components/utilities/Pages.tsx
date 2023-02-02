@@ -1,7 +1,9 @@
-import { Box, Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 interface pageProps {
     prevTitle?: string;
@@ -11,9 +13,50 @@ interface pageProps {
 }
 
 function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
+    const router = useRouter();
+    const home = router.asPath == "/";
     return (
-        <HStack w="100%" justify="center" cursor="pointer" my="3rem" gap="2rem">
-            <Box w={["full", "100%"]}>
+        <HStack
+            w={["90%", "100%"]}
+            justify="center"
+            cursor="pointer"
+            py="3rem"
+            gap={["1rem", "2rem"]}
+            pos={["fixed", "unset"]}
+            bgColor="white"
+            bottom="0"
+            align="center"
+            left="50%"
+            transform={["translateX(-50%)", "unset"]}
+        >
+            <Box
+                w={["full", "100%"]}
+                display={[
+                    prevTitle == undefined || nextTitle == undefined
+                        ? "flex"
+                        : "none",
+                    "none",
+                ]}
+            >
+                <Button
+                    onClick={() => router.back()}
+                    variant="solid"
+                    bgColor="brand.100"
+                    color="white"
+                    // mb="1rem"
+                    w="full"
+                    h="2.8rem"
+                    fontSize=".9rem"
+                    leftIcon={<MdOutlineArrowBackIos />}
+                    // display={home ? "none" : "flex"}
+                >
+                    Back
+                </Button>
+            </Box>
+            <Box
+                w={["full", "100%"]}
+                display={prevTitle == undefined ? "none" : "block"}
+            >
                 <Link
                     passHref
                     href={
@@ -24,7 +67,6 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 >
                     <Box
                         w="full"
-                        // display={prevTitle == undefined ? "none" : prevTitle}
                         border="1px solid"
                         borderColor={
                             prevTitle == undefined ? "gray.100" : "gray.300"
@@ -65,7 +107,10 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                     </Box>
                 </Link>
             </Box>
-            <Box w={["full", "100%"]}>
+            <Box
+                w={["full", "100%"]}
+                display={nextTitle == undefined ? "none" : "block"}
+            >
                 <Link
                     passHref
                     href={
@@ -76,7 +121,6 @@ function Pages({ prevTitle, nextTitle, nextUrl, prevUrl }: pageProps) {
                 >
                     <Box
                         w="full"
-                        // display={nextTitle == undefined ? "none" : nextTitle}
                         border="1px solid"
                         borderColor={
                             nextTitle == undefined ? "gray.100" : "gray.300"

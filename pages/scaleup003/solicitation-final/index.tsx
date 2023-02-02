@@ -11,9 +11,12 @@ import {
     Tr,
     Td,
     TableContainer,
+    Flex,
+    VStack,
 } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
+import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -26,13 +29,24 @@ function Third() {
     return (
         <Box>
             <Steps value={2.5} />
-            <Breadcrumbs />
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="yellow.500" status="In Progress" />
+            </Flex>
             <Heading textTransform="capitalize">{pageName}</Heading>
+
             <Text mt="1rem">
-                You are required to download the document attached below to
-                guide you on the next line of action to complete your bidding
+                You are requested to submit the following documents in separate
+                file attachments as their bids: <br />
+                <br />· ScaleUp Bid Submission Form (PDF Form); Important Note:
+                This form uses special features – therefore, in order to use it
+                you must download and open the form using Adobe Reader DC or
+                higher. Any other software may result the form to malfunction
+                and/or erase the digital signatures. <br />
+                <br />· Financial Bid Form (attached to the solicitation
+                notice/email)
             </Text>
-            <TableContainer>
+            {/* <TableContainer>
                 <Table border="1px solid">
                     <Thead>
                         <Tr bgColor="gray.600">
@@ -90,7 +104,7 @@ function Third() {
                         </Tr>
                     </Tbody>
                 </Table>
-            </TableContainer>
+            </TableContainer> */}
             <Box mt="2rem">
                 <Pages
                     prevTitle="feedback period"

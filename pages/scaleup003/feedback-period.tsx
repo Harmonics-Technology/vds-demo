@@ -1,6 +1,7 @@
-import { Box, Heading, Text, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Icon, Flex } from "@chakra-ui/react";
 import Breadcrumbs from "@components/utilities/Breadcrumbs";
 import Pages from "@components/utilities/Pages";
+import { PageStatus } from "@components/utilities/PageStatus";
 import Steps from "@components/utilities/Steps";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -13,14 +14,21 @@ function Third() {
     return (
         <Box>
             <Steps value={2} />
-            <Breadcrumbs />
+            <Flex align="center" justify={["flex-end", "space-between"]}>
+                <Breadcrumbs />
+                <PageStatus bg="yellow.500" status="In Progress" />
+            </Flex>
             <Heading textTransform="capitalize">{pageName}</Heading>
             <Text mt="1rem">You are now in the {pageName}!</Text>
             <Text>
                 You'll be required to complete the questionnaire sample
                 questionnaire
             </Text>
-            <Link color="blue" isExternal href="/">
+            <Link
+                color="blue"
+                isExternal
+                href="https://www.surveymonkey.com/r/BN3RXG5"
+            >
                 Click here to fill questionnaire{" "}
                 <Icon as={BiLinkExternal} mx="2px" />
             </Link>

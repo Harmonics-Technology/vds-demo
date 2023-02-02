@@ -2,6 +2,7 @@ import React from "react";
 import ClayMultiStepNav from "@clayui/multi-step-nav";
 import "@clayui/css/lib/css/atlas.css";
 import { useRouter } from "next/router";
+import useWindowSize from "./useWindowSize";
 
 function Steps({ value }: { value: number }) {
     const router = useRouter();
@@ -43,27 +44,36 @@ function Steps({ value }: { value: number }) {
                 router.push("/scaleup003/evaluation-and-interactive-session"),
         },
     ];
+    const size = useWindowSize();
     return (
-        <ClayMultiStepNav>
-            {steps.map(({ active, complete, onClick, subTitle, title }, i) => (
-                <ClayMultiStepNav.Item
-                    active={active}
-                    complete={complete}
-                    expand={i + 1 !== steps.length}
-                    key={i}
-                >
-                    <ClayMultiStepNav.Title>{title}</ClayMultiStepNav.Title>
-                    <ClayMultiStepNav.Divider />
-                    <ClayMultiStepNav.Indicator
-                        complete={complete}
-                        label={1 + i}
-                        onClick={onClick}
-                        // spritemap={spritemap}
-                        // subTitle={subTitle}
-                    />
-                </ClayMultiStepNav.Item>
-            ))}
-        </ClayMultiStepNav>
+        <>
+            <ClayMultiStepNav>
+                {steps.map(
+                    ({ active, complete, onClick, subTitle, title }, i) => (
+                        <ClayMultiStepNav.Item
+                            active={active}
+                            complete={complete}
+                            expand={i + 1 !== steps.length}
+                            key={i}
+                        >
+                            {size.width != null && size.width >= 590 && (
+                                <ClayMultiStepNav.Title>
+                                    {title}
+                                </ClayMultiStepNav.Title>
+                            )}
+                            <ClayMultiStepNav.Divider />
+                            <ClayMultiStepNav.Indicator
+                                complete={complete}
+                                label={1 + i}
+                                onClick={onClick}
+                                // spritemap={spritemap}
+                                // subTitle={subTitle}
+                            />
+                        </ClayMultiStepNav.Item>
+                    ),
+                )}
+            </ClayMultiStepNav>
+        </>
     );
 }
 
